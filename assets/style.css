@@ -131,7 +131,6 @@ body {
 }
 
 
-
 /* Menu de gauche */
 
 .logged-in-block {
@@ -159,19 +158,17 @@ body {
 }
 
 
-
-
 /* Vignettes des vidéos */
 .video-thumbnail {
   background-color:#ececec00 !important;
 }
 
 @media only screen and (min-width:500px) {
-.video-thumbnail {
-  border-radius: 12px !important;
-  -moz-border-radius:12px !important;
-  -webkit-border-radius:12px !important;
-}
+  .video-thumbnail {
+    border-radius: 12px !important;
+    -moz-border-radius:12px !important;
+    -webkit-border-radius:12px !important;
+  }
 }
 
 .miniature-thumbnail {
@@ -191,11 +188,11 @@ body {
 }
 
 @media only screen and (min-width:500px) {
-.miniature-thumbnail {
-  border-radius: 12px !important;
-  -moz-border-radius:12px !important;
-  -webkit-border-radius:12px !important;
-}
+  .miniature-thumbnail {
+    border-radius: 12px !important;
+    -moz-border-radius:12px !important;
+    -webkit-border-radius:12px !important;
+  }
 }
 
 
@@ -238,15 +235,14 @@ body {
   color: var(--DarkEvolutionLinksHover) !important;
 }
 
-
 .avatar.channel {
   border-radius: 12px !important;
 }
 
 .channel {
   border-radius: 12px !important;
-  -moz-border-radius:12px !important;
-  -webkit-border-radius:12px !important;
+  -moz-border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
 }
 
 .ng-select-container {
@@ -259,11 +255,11 @@ body {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
-  margin-top:5px !important;
+  margin-top: 5px !important;
 }
 
 .ng-dropdown-panel-items.scroll-host {
-  max-height:300px !important;
+  max-height: 300px !important;
 }
 
 
@@ -274,8 +270,8 @@ body {
 }
 
 .modal-content {
-  -moz-border-radius:12px !important;
-  -webkit-border-radius:12px !important;
+  -moz-border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
 }
 
 
@@ -309,17 +305,17 @@ body {
 }
 
 .title-page-autoplay {
-  padding-bottom:20px;
+  padding-bottom: 20px;
 }
 
 @media only screen and (min-width:1100px) {
 .video-info {
-  margin-right:20px !important;
+  margin-right: 20px !important;
 }
 }
 
 .video-info-description {
-  margin-inline-start:0px !important;
+  margin-inline-start: 0px !important;
 }
 
 my-timestamp-input input {
@@ -356,9 +352,9 @@ my-timestamp-input input {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
-  background-color:#272727;
+  background-color: #272727;
   padding: 20px 20px 5px 20px;
-  margin-bottom:10px;
+  margin-bottom: 10px;
 }
 
 .video-info-description-html a {
@@ -548,8 +544,7 @@ my-recommended-videos .avatar.channel {
 
 .root-comment.is-child.ng-star-inserted .is-child {
   padding: 20px 20px 0 0 !important;
-  margin:
-   0 0 0 -5px;
+  margin: 0 0 0 -5px;
 }
 .root-comment.is-child.ng-star-inserted {
   padding: 20px 20px 0 0 !important;
