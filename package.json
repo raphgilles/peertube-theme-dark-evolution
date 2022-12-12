@@ -1,6 +1,6 @@
 {
   "name": "peertube-theme-dark-evolution",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "Evolution of the official PeerTube dark theme",
   "engine": {
     "peertube": ">=4.2.0"
@@ -11,7 +11,7 @@
   ],
   "homepage": "https://tooter.social/@raph",
   "author": "Raph",
-  "bugs": "https://framagit.org/raphgilles/peertube-theme-dark-evolution/-/issues",
+  "bugs": "https://github.com/raphgilles/peertube-theme-dark-evolution/issues",
   "staticDirs": {},
   "css": [
     "assets/style.css"

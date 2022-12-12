@@ -106,6 +106,13 @@ body {
   max-width: 600px !important;
 }
 
+@media screen and (max-width: 500px) {
+#typeahead-container {
+  width: 95%;
+  margin-right:20px !important;
+}
+}
+
 #typeahead-instructions {
   border-radius: 12px !important;
   -moz-border-radius:12px !important;
@@ -141,14 +148,6 @@ body {
   border-radius: 12px !important;
   -moz-border-radius:12px !important;
   -webkit-border-radius:12px !important;
-}
-
-.popover-body a {
-  color: var(--DarkEvolutionOrange) !important;
-}
-
-.popover-body a:hover {
-  color: var(--DarkEvolutionLinksHover) !important;
 }
 
 .notifications a {
@@ -282,6 +281,15 @@ body {
 
 
 /* Affichage d'une vidéo */
+
+@media screen and (max-width: 450px){
+  #video-wrapper {
+    position: sticky;
+    top: 20px;
+    z-index: 1;
+  }
+}
+
 .peertube-plugin-livechat-button {
   border-radius: 3px !important;
   -moz-border-radius: 3px !important;
@@ -434,6 +442,87 @@ my-video-attributes {
   visibility:hidden;
 }
 
+.other-videos:not(.display-as-row) my-video-miniature {
+  max-width: 300px !important;
+}
+
+my-recommended-videos .avatar.channel {
+  border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+}
+
+
+
+/* Personnalisation du lecteur vidéo */
+.vjs-play-progress.vjs-slider-bar::before {
+  color: var(--mainColor);
+}
+.video-js.vjs-peertube-skin .vjs-control-bar .vjs-progress-control .vjs-slider .vjs-play-progress {
+  background: var(--greyForegroundColor);
+}
+.vjs-settings-dialog.vjs-modal-overlay {
+  border-radius: 12px;
+}
+.vjs-time-tooltip {
+  border-radius: 12px !important;
+  padding: 9px 12px !important;
+  background: #00000090 !important;
+}
+
+/* Bouton "full-screen" */
+.vjs-fullscreen-control.vjs-control.vjs-button {
+  margin-top: -5px;
+  right: -3px;
+}
+
+.video-js.vjs-peertube-skin .vjs-control-bar .vjs-fullscreen-control .vjs-icon-placeholder::before {
+  content: "⛶" !important;
+}
+
+.vjs-fullscreen-control .vjs-icon-placeholder {
+  background: none !important;
+}
+
+/* Effet de brillance en fond */
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+  70% {
+    transform: scale(1.00);
+  }
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+#videojs-wrapper > :not(.vjs-paused) video {
+  z-index: 1;
+}
+
+#videojs-wrapper > :not(.vjs-paused) .vjs-poster {
+  filter: blur(60px);
+  z-index: 0;
+  animation: pulse 8s infinite linear;
+  height: 100%;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+}
+
+.vjs-mobile-buttons-overlay {
+  z-index: 3;
+}
+
+.vjs-overlay {
+  z-index: 2;
+}
+
+
+
+
+/* Espace commentaires */
 .root-comment {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
@@ -455,6 +544,45 @@ my-video-attributes {
 
 .comment-html a:hover {
   color: var(--DarkEvolutionLinksHover) !important;
+}
+
+.root-comment.is-child.ng-star-inserted .is-child {
+  padding: 20px 20px 0 0 !important;
+  margin:
+   0 0 0 -5px;
+}
+.root-comment.is-child.ng-star-inserted {
+  padding: 20px 20px 0 0 !important;
+  margin: -10px 0 0 -5px;
+}
+
+.root-comment.is-child.ng-star-inserted .comment-account-date.ng-star-inserted {
+  margin-top: 3px;
+}
+
+.comment-html.ng-star-inserted {
+  padding-right: 10px;
+}
+
+.comment .comment-html {
+   margin-left : -44px;
+  margin-top:10px; 
+}
+
+.comment-account-date.ng-star-inserted {
+  margin-top: 10px;
+}
+
+.comment-actions {
+   margin-left : -44px;
+}
+
+.view-replies {
+   margin-left : -46px;
+}
+
+.vertical-border{
+  visibility: hidden;
 }
 
 
