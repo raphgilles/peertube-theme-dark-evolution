@@ -119,7 +119,7 @@ body {
   -webkit-border-radius:12px !important;
   margin-top: 5px !important;
   font-size: 14px !important;
-  background-color: #272727 !important;
+  background-color: #202020 !important;
 }
 
 #typeahead-container {
@@ -130,14 +130,22 @@ body {
   color:#f2690d;
 }
 
+.sub-header-container {
+  background-color: #1b1817 !important;
+}
+
 
 
 /* Menu de gauche */
 
+menu {
+  background-color: #111 !important;
+}
+
 .logged-in-block {
   border-bottom-left-radius: 12px !important;
   border-bottom-right-radius: 12px !important;
-  background-color:#272727 !important;
+  background-color:#202020 !important;
 }
 
 .logged-in-block a {
@@ -197,6 +205,8 @@ body {
   -webkit-border-radius:12px !important;
 }
 }
+
+
 
 
 /* Affichage d'une chaîne */
@@ -280,7 +290,12 @@ body {
 
 
 
+
 /* Affichage d'une vidéo */
+
+#video-wrapper {
+  background-color: #000000 !important;
+}
 
 @media screen and (max-width: 450px){
   #video-wrapper {
@@ -356,7 +371,7 @@ my-timestamp-input input {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
-  background-color:#272727;
+  background-color:#202020;
   padding: 20px 20px 5px 20px;
   margin-bottom:10px;
 }
@@ -373,7 +388,7 @@ my-timestamp-input input {
   border-radius: 25px !important;
   -moz-border-radius: 25px !important;
   -webkit-border-radius: 25px !important;
-  background-color:#272727 !important;
+  background-color:#202020 !important;
   line-height:35px !important;
   height:35px !important;
   padding-left:20px;
@@ -388,7 +403,7 @@ my-timestamp-input input {
   border-radius: 25px !important;
   -moz-border-radius: 25px !important;
   -webkit-border-radius: 25px !important;
-  background-color:#272727 !important;
+  background-color:#202020 !important;
   line-height:35px !important;
   height:35px !important;
   padding-left:20px;
@@ -403,6 +418,12 @@ my-timestamp-input input {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
+  padding-inline-start: 10px !important;
+  padding: 0 0 !important;
+}
+
+.dropdown-toggle.btn.dropdown-toggle-split.last-in-group {
+  background-color: transparent !important;
 }
 
 .modal-body a {
@@ -416,6 +437,10 @@ my-timestamp-input input {
 my-video-attributes {
   padding-bottom:10px;
   margin-inline-start: 0px !important;
+}
+
+h1.video-info-name {
+  position: relative;
 }
 
 .attribute.attribute-privacy {
@@ -451,6 +476,7 @@ my-recommended-videos .avatar.channel {
   -moz-border-radius: 6px !important;
   -webkit-border-radius: 6px !important;
 }
+
 
 
 
@@ -502,7 +528,7 @@ my-recommended-videos .avatar.channel {
 }
 
 #videojs-wrapper > :not(.vjs-paused) .vjs-poster {
-  filter: blur(60px);
+  filter: blur(100px) saturate(2);
   z-index: 0;
   animation: pulse 8s infinite linear;
   height: 100%;
@@ -527,7 +553,7 @@ my-recommended-videos .avatar.channel {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
-  background-color:#272727;
+  background-color:#202020;
   padding: 20px 20px 0px 20px;
   margin-bottom:10px;
 }
@@ -546,44 +572,53 @@ my-recommended-videos .avatar.channel {
   color: var(--DarkEvolutionLinksHover) !important;
 }
 
-.root-comment.is-child.ng-star-inserted .is-child {
-  padding: 20px 20px 0 0 !important;
-  margin:
-   0 0 0 -5px;
-}
-.root-comment.is-child.ng-star-inserted {
-  padding: 20px 20px 0 0 !important;
-  margin: -10px 0 0 -5px;
-}
-
-.root-comment.is-child.ng-star-inserted .comment-account-date.ng-star-inserted {
-  margin-top: 3px;
-}
-
 .comment-html.ng-star-inserted {
-  padding-right: 10px;
+  padding-right: 10px !important;
 }
 
 .comment .comment-html {
-   margin-left : -44px;
+  margin-left : -44px !important;
   margin-top:10px; 
 }
 
-.comment-account-date.ng-star-inserted {
-  margin-top: 10px;
+.comment-actions {
+  margin-left : -44px !important;
 }
 
-.comment-actions {
-   margin-left : -44px;
+.root-comment.is-child.ng-star-inserted {
+  padding: 20px 0 0 10px !important;
+  margin: -10px 0 0 -5px !important;
+}
+
+.root-comment.is-child.ng-star-inserted .is-child {
+  padding: 10px 0px 0 0 !important;
+  margin: 0 0 0 -42px !important;
+}
+
+.root-comment.is-child.ng-star-inserted .comment-account-date.ng-star-inserted {
+  margin-top: 3px !important;
+}
+
+.is-child .comment-html.ng-star-inserted {
+  padding-left: 8px !important;
+}
+
+.is-child .comment-actions {
+  margin-left : -34px !important;
+}
+
+.comment-account-date.ng-star-inserted {
+  margin-top: 8px !important;
 }
 
 .view-replies {
-   margin-left : -46px;
+  margin-left : -46px !important;
 }
 
 .vertical-border{
-  visibility: hidden;
+ visibility: hidden;
 }
+
 
 
 
@@ -629,32 +664,14 @@ my-recommended-videos .avatar.channel {
 .btn.ng-star-inserted {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
-  -webkit-border-radius: 12px !important;
-  border-top-right-radius: 0px !important;
-  -moz-border-top-right-radius: 0px !important;
-  -webkit-border-top-right-radius: 0px !important; 
-  border-bottom-right-radius: 0px !important;
-  -moz-border-bottom-right-radius: 0px !important;
-  -webkit-border-bottom-right-radius: 0px !important; 
-}
-
-.dropdown-toggle.btn.dropdown-toggle-split.last-in-group {
-  border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  -webkit-border-radius: 0px !important;
-  border-top-right-radius: 12px !important;
-  -moz-border-top-right-radius: 12px !important;
-  -webkit-border-top-right-radius: 12px !important; 
-  border-bottom-right-radius: 12px !important;
-  -moz-border-bottom-right-radius: 12px !important;
-  -webkit-border-bottom-right-radius: 12px !important; 
+  -webkit-border-radius: 12px !important; 
 }
 
 .channels-setup-message.alert.pt-alert-primary.ng-star-inserted {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important;
-  background-color: #272727;
+  background-color: #202020;
   border:0px;
 }
 
@@ -664,8 +681,5 @@ my-recommended-videos .avatar.channel {
 }
 
 .dropdown-toggle.action-button.grey.button-styled {
-  border-radius: 12px !important;
-  -moz-border-radius: 12px !important;
-  -webkit-border-radius: 12px !important; 
   margin-top: 5px;
 }
