@@ -29,7 +29,7 @@ Created by [Raph](https://tooter.social/@raph) and [StefOfficiel](https://mastod
 - Nouveaux menus déroulants
 - Améliorations des boutons
 
-**v0.5.7**
+**v0.5.8**
 - Correction d'alignements dans l'espace commentaires
 
 **v0.5.7**
