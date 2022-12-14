@@ -24,8 +24,16 @@ Created by [Raph](https://tooter.social/@raph) and [StefOfficiel](https://mastod
 
 ## Updates
 
-**v0.5.6**
-- Effet de surbrillance en fond lors de la lecture vidéo
+**v0.6.1**
+- Amélioration de l'effet de scintillement en fond lors de la lecture de la vidéo
+- Nouveaux menus déroulants
+- Améliorations des boutons
+
+**v0.5.7**
+- Correction d'alignements dans l'espace commentaires
+
+**v0.5.7**
+- Effet de scintillement en fond lors de la lecture vidéo
 - Amoindrissement de l'effet d'arrondi des avatars dans les suggestions de vidéos
 - Corrections mineures
 

@@ -1,7 +1,7 @@
 /* Thème principal */
 
 body {
-  --mainBackgroundColor: #111111;
+  --mainBackgroundColor: #1b1817;
   --mainForegroundColor: #e0e0e1;
 
   --mainBackgroundHoverColor: #30343b;
@@ -85,7 +85,7 @@ body {
 
 
 /* Header */
-#customcss .publish-button {
+.publish-button {
   border-radius: 24px !important;
   -moz-border-radius:24px !important;
   -webkit-border-radius:24px !important;
@@ -367,6 +367,12 @@ my-timestamp-input input {
   -webkit-border-radius: 12px !important;
 }
 
+.video-info-channel-left.d-flex .avatar {
+  border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+}
+
 .video-info-description-html {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
@@ -424,6 +430,9 @@ my-timestamp-input input {
 
 .dropdown-toggle.btn.dropdown-toggle-split.last-in-group {
   background-color: transparent !important;
+  border: 0px !important;
+  padding-left:10px !important;
+  padding-inline-start: 15px;
 }
 
 .modal-body a {
@@ -527,14 +536,28 @@ my-recommended-videos .avatar.channel {
   z-index: 1;
 }
 
-#videojs-wrapper > :not(.vjs-paused) .vjs-poster {
-  filter: blur(100px) saturate(2);
+#videojs-wrapper > :not(.vjs-paused) .vjs-poster, #videojs-wrapper > :not(.vjs-playing) .vjs-poster {
+  filter: blur(60px);
   z-index: 0;
   animation: pulse 8s infinite linear;
   height: 100%;
   width: 100%;
   display: block;
   cursor: pointer;
+}
+
+#videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
+  z-index: 1;
+}
+
+#videojs-wrapper video, .vjs-poster {
+  border-bottom-right-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-left-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-right-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
+  background-color: transparent !important;
 }
 
 .vjs-mobile-buttons-overlay {
@@ -545,6 +568,20 @@ my-recommended-videos .avatar.channel {
   z-index: 2;
 }
 
+.vjs-control-bar {
+  border-bottom-right-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-right-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-right-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
+}
+
+.playlist.ng-star-inserted {
+  border-bottom-left-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-left-radius: 12px !important;
+}
 
 
 
@@ -662,9 +699,12 @@ my-recommended-videos .avatar.channel {
 }
 
 .btn.ng-star-inserted {
-  border-radius: 12px !important;
-  -moz-border-radius: 12px !important;
-  -webkit-border-radius: 12px !important; 
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important;
+  padding-right: 14px !important;
+  padding-inline-end: 11px !important;
+  line-height:14px !important;
 }
 
 .channels-setup-message.alert.pt-alert-primary.ng-star-inserted {
@@ -675,6 +715,10 @@ my-recommended-videos .avatar.channel {
   border:0px;
 }
 
+.btn-group.dropdown button {
+  padding-inline-start: 6px !important;
+}
+
 .dropdown-toggle.input-group-text.c-hand.ng-star-inserted {
   border:0px;
   color:#FFFFFF;
@@ -683,3 +727,48 @@ my-recommended-videos .avatar.channel {
 .dropdown-toggle.action-button.grey.button-styled {
   margin-top: 5px;
 }
+
+
+
+
+/* Boutons et menus déroulants du site */
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.dropdown-menu.show {
+  background: #00000099;
+  backdrop-filter: blur(50px);
+  border:0px;
+  -webkit-animation: fadeIn 0.4s;
+}
+
+.dropdown-menu.show, .modal-content, .playlist.ng-star-inserted {
+  background: #00000099 !important;
+  backdrop-filter: blur(50px);
+  border: 0px;
+  -webkit-animation: fadeIn 0.4s;
+}
+
+.dropdown-menu.show a {
+  color: #FFFFFF;
+}
+
+.nav-link.nav-item.active {
+  background-color: transparent !important;
+}
+
+.nav-link.nav-item {
+  color: #FFFFFF !important;
+}
+
+.btn-group.show.dropdown {
+  border: 0px !important;
+}
+
