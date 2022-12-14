@@ -84,7 +84,12 @@ body {
 
 
 
+
 /* Header */
+.root-header {
+  background-color: #111111 !important;
+}
+
 .publish-button {
   border-radius: 24px !important;
   -moz-border-radius:24px !important;
@@ -294,7 +299,11 @@ menu {
 /* Affichage d'une vidéo */
 
 #video-wrapper {
-  background-color: #000000 !important;
+  background-color: transparent !important;
+}
+
+#videojs-wrapper {
+  background-color: transparent;
 }
 
 @media screen and (max-width: 450px){
@@ -511,12 +520,8 @@ my-recommended-videos .avatar.channel {
   right: -3px;
 }
 
-.video-js.vjs-peertube-skin .vjs-control-bar .vjs-fullscreen-control .vjs-icon-placeholder::before {
-  content: "⛶" !important;
-}
-
 .vjs-fullscreen-control .vjs-icon-placeholder {
-  background: none !important;
+  background: transparent !important;
 }
 
 /* Effet de brillance en fond */
@@ -575,6 +580,15 @@ my-recommended-videos .avatar.channel {
   -webkit-border-bottom-left-radius: 12px !important;
   -moz-border-bottom-right-radius: 12px !important;
   -webkit-border-bottom-left-radius: 12px !important;
+}
+
+
+#videojs-wrapper  {
+  background-color: transparent !important;
+}
+
+.video-js {
+  background-color: transparent !important;
 }
 
 .playlist.ng-star-inserted {
@@ -703,7 +717,7 @@ my-recommended-videos .avatar.channel {
   -moz-border-radius: 24px !important;
   -webkit-border-radius: 24px !important;
   padding-right: 14px !important;
-  padding-inline-end: 11px !important;
+  padding-inline-end: 12px !important;
   line-height:14px !important;
 }
 
@@ -716,7 +730,7 @@ my-recommended-videos .avatar.channel {
 }
 
 .btn-group.dropdown button {
-  padding-inline-start: 6px !important;
+  padding-inline-start: 8px !important;
 }
 
 .dropdown-toggle.input-group-text.c-hand.ng-star-inserted {

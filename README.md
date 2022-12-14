@@ -24,12 +24,12 @@ Created by [Raph](https://tooter.social/@raph) and [StefOfficiel](https://mastod
 
 ## Updates
 
-**v0.6.1**
+**v0.6.2**
 - Amélioration de l'effet de scintillement en fond lors de la lecture de la vidéo
 - Nouveaux menus déroulants
 - Améliorations des boutons
 
-**v0.5.8**
+**v0.5.7**
 - Correction d'alignements dans l'espace commentaires
 
 **v0.5.7**
