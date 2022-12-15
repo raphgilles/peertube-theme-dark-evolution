@@ -552,10 +552,6 @@ my-recommended-videos .avatar.channel {
   z-index: 1 !important;
 }
 
-#videojs-wrapper > :not(.vjs-paused) video {
-  z-index: 2 !important;
-}
-
 #videojs-wrapper > :not(.vjs-playing) .vjs-poster {
   z-index: 2;
   filter: blur(0);
