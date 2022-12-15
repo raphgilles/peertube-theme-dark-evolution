@@ -429,6 +429,18 @@ my-timestamp-input input {
   background-color:#414040 !important;
 }
 
+my-video-add-to-playlist {
+  max-width: 300px;
+  overflow: hidden;
+  display: block;
+}
+
+.playlist.dropdown-item.ng-star-inserted {
+   border-bottom-left-radius: 0px !important;
+  -webkit-border-bottom-left-radius: 0px !important;
+  -moz-border-bottom-left-radius: 0px !important;
+}
+
 .btn-group-subscribe {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
@@ -515,14 +527,7 @@ my-recommended-videos .avatar.channel {
 }
 
 /* Bouton "full-screen" */
-.vjs-fullscreen-control.vjs-control.vjs-button {
-  margin-top: -5px;
-  right: -3px;
-}
 
-.vjs-fullscreen-control .vjs-icon-placeholder {
-  background: transparent !important;
-}
 
 /* Effet de brillance en fond */
 @keyframes pulse {
@@ -537,13 +542,29 @@ my-recommended-videos .avatar.channel {
   }
 }
 
+
+#videojs-wrapper > :is(.vjs-paused) video {
+  z-index: 2 !important;
+  display: block;
+}
+
+#videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
+  z-index: 1 !important;
+}
+
 #videojs-wrapper > :not(.vjs-paused) video {
-  z-index: 1;
+  z-index: 2 !important;
+}
+
+#videojs-wrapper > :not(.vjs-playing) .vjs-poster {
+  z-index: 2;
+  filter: blur(0);
+  animation: none;
 }
 
 #videojs-wrapper > :not(.vjs-paused) .vjs-poster, #videojs-wrapper > :not(.vjs-playing) .vjs-poster {
-  filter: blur(60px);
-  z-index: 0;
+  filter: blur(100px) saturate(1.3);
+  z-index: 0 !important;
   animation: pulse 8s infinite linear;
   height: 100%;
   width: 100%;
@@ -551,26 +572,38 @@ my-recommended-videos .avatar.channel {
   cursor: pointer;
 }
 
-#videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
+.vjs-big-play-button {
   z-index: 1;
 }
 
-#videojs-wrapper video, .vjs-poster {
-  border-bottom-right-radius: 12px !important;
-  border-bottom-left-radius: 12px !important;
-  -moz-border-bottom-left-radius: 12px !important;
-  -webkit-border-bottom-left-radius: 12px !important;
-  -moz-border-bottom-right-radius: 12px !important;
-  -webkit-border-bottom-left-radius: 12px !important;
+.vjs-has-started .vjs-poster {
+  filter: blur(100px) !important;
+  display: block !important;
+  animation: pulse 8s infinite linear !important;
+}
+
+@media screen and (max-width: 500px){
+  #videojs-wrapper > :is(.vjs-paused) .vjs-mobile-buttons-overlay {
+    z-index: 3;
+  }
+}
+
+#videojs-wrapper  {
   background-color: transparent !important;
 }
 
-.vjs-mobile-buttons-overlay {
-  z-index: 3;
+.video-js {
+  background-color: transparent !important;
 }
 
-.vjs-overlay {
-  z-index: 2;
+@media screen and (min-width: 500px){
+#videojs-wrapper video {
+  border-bottom-right-radius: 12px !important;
+  border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-right-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-right-radius: 12px !important;
+  -webkit-border-bottom-left-radius: 12px !important;
 }
 
 .vjs-control-bar {
@@ -582,20 +615,14 @@ my-recommended-videos .avatar.channel {
   -webkit-border-bottom-left-radius: 12px !important;
 }
 
-
-#videojs-wrapper  {
-  background-color: transparent !important;
-}
-
-.video-js {
-  background-color: transparent !important;
-}
-
 .playlist.ng-star-inserted {
   border-bottom-left-radius: 12px !important;
   -webkit-border-bottom-left-radius: 12px !important;
   -moz-border-bottom-left-radius: 12px !important;
 }
+
+}
+
 
 
 
@@ -756,16 +783,11 @@ my-recommended-videos .avatar.channel {
       to { opacity: 1; }
 }
 
-.dropdown-menu.show {
-  background: #00000099;
-  backdrop-filter: blur(50px);
-  border:0px;
-  -webkit-animation: fadeIn 0.4s;
-}
-
-.dropdown-menu.show, .modal-content, .playlist.ng-star-inserted {
-  background: #00000099 !important;
-  backdrop-filter: blur(50px);
+.dropdown-menu.show, .modal-content, .ng-dropdown-panel {
+  background: #2020207D !important;
+  background-blend-mode: overlay;
+  box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
+  backdrop-filter: blur(33px);
   border: 0px;
   -webkit-animation: fadeIn 0.4s;
 }
