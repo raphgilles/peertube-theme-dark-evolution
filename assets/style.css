@@ -544,16 +544,16 @@ my-recommended-videos .avatar.channel {
 
 
 #videojs-wrapper > :is(.vjs-paused) video {
-  z-index: 2 !important;
+  z-index: 1 !important;
   display: block;
 }
 
 #videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
-  z-index: 1 !important;
+  z-index: 2 !important;
 }
 
 #videojs-wrapper > :not(.vjs-playing) .vjs-poster {
-  z-index: 2;
+  z-index: 1;
   filter: blur(0);
   animation: none;
 }
@@ -779,7 +779,7 @@ my-recommended-videos .avatar.channel {
       to { opacity: 1; }
 }
 
-.dropdown-menu.show, .modal-content, .ng-dropdown-panel {
+.dropdown-menu.show, .modal-content, .ng-dropdown-panel, {
   background: #2020207D !important;
   background-blend-mode: overlay;
   box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
