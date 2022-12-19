@@ -203,6 +203,11 @@ menu {
   color:#bbb !important;
 }
 
+.root .videos, .root .playlists {
+  --miniatureMinWidth: 255px !important;
+  --miniatureMaxWidth: 300px !important;
+}
+
 @media only screen and (min-width:500px) {
 .miniature-thumbnail {
   border-radius: 12px !important;
@@ -542,14 +547,13 @@ my-recommended-videos .avatar.channel {
   }
 }
 
+#videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
+  z-index: 2 !important;
+}
 
 #videojs-wrapper > :is(.vjs-paused) video {
   z-index: 1 !important;
   display: block;
-}
-
-#videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
-  z-index: 2 !important;
 }
 
 #videojs-wrapper > :not(.vjs-playing) .vjs-poster {
@@ -590,6 +594,13 @@ my-recommended-videos .avatar.channel {
 
 .video-js {
   background-color: transparent !important;
+}
+
+#peertube-plugin-livechat-container > iframe {
+  border-bottom-left-radius: 12px !important;
+  border-top-left-radius: 12px !important;
+  z-index: 0 !important;
+  z-index: 2;
 }
 
 @media screen and (min-width: 500px){
@@ -730,6 +741,9 @@ my-recommended-videos .avatar.channel {
 }
 
 .action-button.grey-button.has-icon.ng-star-inserted {
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important;
   margin:5px;
   height:35px;
   line-height:35px;
@@ -768,6 +782,41 @@ my-recommended-videos .avatar.channel {
 
 
 
+
+/* Gestion de l'historique, Abonnements, Listes, Vidéos, Chaînes */
+.peertube-select-container.peertube-select-button {
+  border-radius: 12px !important;
+  -moz-border-radius: 12px !important;
+  -webkit-border-radius: 12px !important;
+}
+
+.chip.rectangular.bg-secondary.text-light.ng-star-inserted {
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.action-button.action-button-delete-selection.ng-star-inserted {
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important;
+  margin: 5px;
+  height: 35px;
+  line-height: 35px;
+}
+
+.create-button {
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important;
+}
+
+
+
+
+
 /* Boutons et menus déroulants du site */
 
 @-webkit-keyframes fadeIn {
@@ -779,11 +828,12 @@ my-recommended-videos .avatar.channel {
       to { opacity: 1; }
 }
 
-.dropdown-menu.show, .modal-content, .ng-dropdown-panel, {
-  background: #2020207D !important;
+.dropdown-menu.show, .modal-content, .ng-dropdown-panel, .scroll-host {
+  background: #4c3434e0 !important;
   background-blend-mode: overlay;
   box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
   backdrop-filter: blur(33px);
+  -webkit-backdrop-filter: blur(33px);
   border: 0px;
   -webkit-animation: fadeIn 0.4s;
 }
