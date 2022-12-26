@@ -1,6 +1,6 @@
 {
   "name": "peertube-theme-dark-evolution",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Evolution of the official PeerTube dark theme",
   "engine": {
     "peertube": ">=4.2.0"

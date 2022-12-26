@@ -24,6 +24,11 @@ Created by [Raph](https://tooter.social/@raph) and [StefOfficiel](https://mastod
 
 ## Updates
 
+**v1.0.0**
+- Suppression du lien "Ma Bibliothèque" dans le menu de gauche, doublon du lien "Chaînes"
+- Agrandissement des vignettes dans l'affichage de l'accueil et des chaînes
+- Corrections mineures
+
 **v0.9.0**
 - Correction d'un bug majeur masquant la vignette avant la lecture d'une vidéo
 - Amélioration globale des boutons du site

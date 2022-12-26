@@ -82,6 +82,10 @@ body {
   -webkit-border-radius:12px !important;
 }
 
+.broadcast-message {
+z-index: 3;
+}
+
 
 
 
@@ -143,8 +147,19 @@ body {
 
 /* Menu de gauche */
 
+a[href="/my-library"] {
+  display: none !important;
+}
+
 menu {
   background-color: #111 !important;
+}
+
+.menu-link {
+width: 90%;
+margin: auto;
+padding-inline-end: 0px !important;
+padding-inline-start: 18px !important;
 }
 
 .logged-in-block {
@@ -204,8 +219,12 @@ menu {
 }
 
 .root .videos, .root .playlists {
-  --miniatureMinWidth: 255px !important;
-  --miniatureMaxWidth: 300px !important;
+  --miniatureMinWidth: 280px !important;
+  --miniatureMaxWidth: 360px !important;
+}
+
+.videos {
+  column-gap: 14px !important;
 }
 
 @media only screen and (min-width:500px) {
@@ -855,5 +874,23 @@ div.progress span {
 
 .btn-group.show.dropdown {
   border: 0px !important;
+}
+
+.dropdown-toggle.btn.dropdown-toggle-split.last-in-group span {
+  background-color: #f2690d;
+  padding: 6px;
+  padding-left: 14px;
+  padding-right: 12px !important;
+  margin-right: 8px;
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important; 
+}
+
+.action-button.action-button-cancel-selection {
+  border-radius: 24px !important;
+  height: 38px !important;
+  line-height: 38px !important;
+  margin-top:4px;
 }
 
