@@ -24,6 +24,15 @@ Created by [Raph](https://tooter.social/@raph) and [StefOfficiel](https://mastod
 
 ## Updates
 
+**v0.9.0**
+- Correction d'un bug majeur masquant la vignette avant la lecture d'une vidéo
+- Amélioration globale des boutons du site
+
+**v0.7.6**
+- Modifications dans les onglets Chaînes, Vidéos, Listes de lecture, Abonnements, Historique
+- Amélioration des menus déroulants
+- Amélioration de la partie administration
+
 **v0.6.2**
 - Amélioration de l'effet de scintillement en fond lors de la lecture de la vidéo
 - Nouveaux menus déroulants

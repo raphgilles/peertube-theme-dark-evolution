@@ -315,7 +315,6 @@ menu {
   #video-wrapper {
     position: sticky;
     top: 20px;
-    z-index: 1;
   }
 }
 
@@ -535,6 +534,15 @@ my-recommended-videos .avatar.channel {
 
 
 /* Effet de brillance en fond */
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
 @keyframes pulse {
   0% {
     transform: scale(0.95);
@@ -547,46 +555,41 @@ my-recommended-videos .avatar.channel {
   }
 }
 
-#videojs-wrapper > :not(.vjs-paused) video, #videojs-wrapper > :not(.vjs-playing) video {
-  z-index: 2 !important;
-}
-
-#videojs-wrapper > :is(.vjs-paused) video {
-  z-index: 1 !important;
-  display: block;
-}
-
-#videojs-wrapper > :not(.vjs-playing) .vjs-poster {
-  z-index: 1;
+.vjs-paused .vjs-poster {
   filter: blur(0);
   animation: none;
+  z-index:2;
 }
 
-#videojs-wrapper > :not(.vjs-paused) .vjs-poster, #videojs-wrapper > :not(.vjs-playing) .vjs-poster {
-  filter: blur(100px) saturate(1.3);
-  z-index: 0 !important;
-  animation: pulse 8s infinite linear;
-  height: 100%;
-  width: 100%;
-  display: block;
-  cursor: pointer;
+.vjs-paused video {
+ z-index:2 !important;
+ cursor: pointer;
 }
 
 .vjs-big-play-button {
-  z-index: 1;
-}
+  z-index: 3;
+  cursor: pointer;
+  }
 
 .vjs-has-started .vjs-poster {
+  animation-name: fadeIn, pulse !important;
+  animation-duration: 4s, 8s;
+  animation-timing-function: linear, linear;
+  animation-iteration-count: 1, infinite;
   filter: blur(100px) !important;
   display: block !important;
-  animation: pulse 8s infinite linear !important;
+  z-index:-1 !important;
 }
 
-@media screen and (max-width: 500px){
-  #videojs-wrapper > :is(.vjs-paused) .vjs-mobile-buttons-overlay {
-    z-index: 3;
-  }
+.vjs-has-started video {
+ z-index:3 !important;
+ cursor: pointer;
 }
+
+.vjs-mobile-buttons-overlay {
+  z-index: 4;
+  cursor: pointer;
+  }
 
 #videojs-wrapper  {
   background-color: transparent !important;
@@ -599,27 +602,18 @@ my-recommended-videos .avatar.channel {
 #peertube-plugin-livechat-container > iframe {
   border-bottom-left-radius: 12px !important;
   border-top-left-radius: 12px !important;
-  z-index: 0 !important;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media screen and (min-width: 500px){
-#videojs-wrapper video {
-  border-bottom-right-radius: 12px !important;
-  border-bottom-left-radius: 12px !important;
-  -moz-border-bottom-right-radius: 12px !important;
-  -webkit-border-bottom-left-radius: 12px !important;
-  -moz-border-bottom-right-radius: 12px !important;
-  -webkit-border-bottom-left-radius: 12px !important;
-}
 
-.vjs-control-bar {
+#videojs-wrapper video, .vjs-poster, .vjs-control-bar {
   border-bottom-right-radius: 12px !important;
   border-bottom-left-radius: 12px !important;
-  -moz-border-bottom-right-radius: 12px !important;
+  -webkit-border-bottom-right-radius: 12px !important;
   -webkit-border-bottom-left-radius: 12px !important;
   -moz-border-bottom-right-radius: 12px !important;
-  -webkit-border-bottom-left-radius: 12px !important;
+  -moz-border-bottom-left-radius: 12px !important;
 }
 
 .playlist.ng-star-inserted {
@@ -704,14 +698,37 @@ my-recommended-videos .avatar.channel {
  visibility: hidden;
 }
 
+converse-avatar .avatar {
+  border-radius: 100px !important;
+}
+
 
 
 
 /* Gestion du compte */
+.pt-badge {
+  border-radius: 12px;
+}
+
+div.progress span {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.btn.ng-star-inserted, .dropdown-toggle.btn.dropdown-toggle-split.last-in-group  {
+  height: 35px !important;
+}
+
+.action-button.grey-button-link.icon-only.has-icon.ng-star-inserted {
+  margin: 5px;
+}
+
 .delete-history {
-  border-radius: 12px !important;
-  -moz-border-radius: 12px !important;
-  -webkit-border-radius: 12px !important; 
+  border-radius: 24px !important;
+  -moz-border-radius: 24px !important;
+  -webkit-border-radius: 24px !important;
+  height: 35px !important;
+  line-height: 35px !important;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -735,7 +752,6 @@ my-recommended-videos .avatar.channel {
   border-radius: 12px !important;
   -moz-border-radius: 12px !important;
   -webkit-border-radius: 12px !important; 
-  margin-top:5px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -775,19 +791,15 @@ my-recommended-videos .avatar.channel {
   color:#FFFFFF;
 }
 
-.dropdown-toggle.action-button.grey.button-styled {
-  margin-top: 5px;
-}
-
 
 
 
 
 /* Gestion de l'historique, Abonnements, Listes, Vidéos, Chaînes */
-.peertube-select-container.peertube-select-button {
-  border-radius: 12px !important;
-  -moz-border-radius: 12px !important;
-  -webkit-border-radius: 12px !important;
+.channels-settings-link.ng-star-inserted, .action-button.grey-button-link.has-icon.ng-star-inserted, .dropdown-toggle.action-button.grey.button-styled, .progress,  input, .peertube-select-container  {
+  border-radius: 24px !important;
+  height: 35px !important;
+  line-height: 35px !important;
 }
 
 .chip.rectangular.bg-secondary.text-light.ng-star-inserted {
@@ -819,17 +831,8 @@ my-recommended-videos .avatar.channel {
 
 /* Boutons et menus déroulants du site */
 
-@-webkit-keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-@keyframes fadeIn {
-    from { opacity: 0; }
-      to { opacity: 1; }
-}
-
 .dropdown-menu.show, .modal-content, .ng-dropdown-panel, .scroll-host {
-  background: #4c3434e0 !important;
+  background: #35303085 !important;
   background-blend-mode: overlay;
   box-shadow: 0 10px 15px rgb(0 0 0 / 20%);
   backdrop-filter: blur(33px);
