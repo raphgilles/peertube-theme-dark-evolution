@@ -218,20 +218,22 @@ padding-inline-start: 18px !important;
   color:#bbb !important;
 }
 
-.root .videos, .root .playlists {
-  --miniatureMinWidth: 280px !important;
-  --miniatureMaxWidth: 360px !important;
-}
-
 .videos {
   column-gap: 14px !important;
 }
 
+
 @media only screen and (min-width:500px) {
+
 .miniature-thumbnail {
   border-radius: 12px !important;
   -moz-border-radius:12px !important;
   -webkit-border-radius:12px !important;
+}
+
+.root .videos, .root .playlists, .videos {
+  --miniatureMinWidth: 280px !important;
+  --miniatureMaxWidth: 360px !important;
 }
 }
 
@@ -334,6 +336,7 @@ padding-inline-start: 18px !important;
   #video-wrapper {
     position: sticky;
     top: 20px;
+    z-index:1;
   }
 }
 
@@ -597,7 +600,7 @@ my-recommended-videos .avatar.channel {
   animation-iteration-count: 1, infinite;
   filter: blur(100px) !important;
   display: block !important;
-  z-index:-1 !important;
+  z-index:0 !important;
 }
 
 .vjs-has-started video {
@@ -621,7 +624,7 @@ my-recommended-videos .avatar.channel {
 #peertube-plugin-livechat-container > iframe {
   border-bottom-left-radius: 12px !important;
   border-top-left-radius: 12px !important;
-  z-index: 1;
+  z-index: 3;
 }
 
 @media screen and (min-width: 500px){
